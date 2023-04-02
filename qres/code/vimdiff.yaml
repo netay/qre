@@ -1,0 +1,37 @@
+navigation:
+  - "｢c   ": prev diff
+  - "｣c   ": next diff
+  - "C-w-w": switch pane
+  - ":qa  ": exit all without saving
+  - ":q   ": exit one by one
+  - ":wq  ": save and exit one by one
+  - C-w-h: left  (LOCAL)
+  - C-w-j: below (MERGED)
+  - C-w-k: top   (BASE)
+  - C-w-l: right (REMOTE)
+edit:
+  - do: diff obtain (pull changes here)
+  - dp: diff put (push changes to other)
+  - ZQ: quit without checking changes
+  - ":diffupdate | :dif": re-scan files
+  - ":1,$+1diffget": get all differences
+  - ":ls": list buffers
+  - "1dp, 2do": set number of buffer to user
+folds:
+  - zo: open
+  - zc: close
+  - za: toggle
+  - zv: open folds for this line
+  - zM: close all
+  - zR: open all
+  - zm: fold more
+  - zr: fold less
+  - zx: update folds
+flags:
+  - -u: file instead of ~/.vimrc
+  - -o: horizontal panes
+  - -O: vertical panes (default)
+  - -n: no swap file
+  - -b: binary mode
+  - -d: diff mode
+  - --: only file names after

@@ -1,0 +1,18 @@
+{
+    "keys": [
+        {"[-C](fg:cyan) | [--demangle](fg:cyan)": "..."},
+        {"[-d](fg:cyan) | [--disassemble](fg:cyan)": "mnemonics for machine instructions"},
+        {"[-D](fg:cyan) | [--disassemble-all](fg:cyan)": "display all, not only instructions"},
+        {"[-g](fg:cyan) | [--debugging](fg:cyan)": "try to parse stabs and ieee debugging format"},
+        {"[-EB](fg:cyan) | [-EL](fg:cyan)": "big endian or little endian"},
+        {"[-h](fg:cyan) | [--headers](fg:cyan) | [--section-headers](fg:cyan)": "display section headers"},
+        {"[-j](fg:cyan) name | [--section](fg:cyan)=name": "display only for section <name>"},
+        {"[-l](fg:cyan) | [--line-numbers](fg:cyan)": "display line numbers using debugging information"},
+        {"[-M](fg:cyan) opts | [--disassemble-options](fg:cyan)=opt": "disasm options"},
+        {"[-r](fg:cyan) | [--reloc](fg:cyan)": "relocation entries"},
+        {"[-R](fg:cyan) | [--dynamic-reloc](fg:cyan)": "dynamic relocations"},
+        {"[-S](fg:cyan) | [--source](fg:cyan)": "intersperse disassembly with source code; implies -d"},
+        {"[-t](fg:cyan) | [--syms](fg:cyan)": "print the symbol table entries for file"},
+        {"[-T](fg:cyan) | [--dynamic-syms](fg:cyan)": "print the symbol table entries for file"}
+    ]
+}

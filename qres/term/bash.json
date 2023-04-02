@@ -1,0 +1,29 @@
+{
+    "hotkeys": [
+        {"C-c": "stop the command"},
+        {"C-z": "suspend the command"},
+        {"C-a": "move to the start of line"},
+        {"C-e": "move to the end of line"},
+        {"C-u": "delete to the start of line"},
+        {"C-k": "delete to the end of line"},
+        {"C-l": "clear the screen"},
+        {"C-s": "stop output to the screen"},
+        {"C-q": "continue output to the screen"},
+        {"C-r": "search the history backwards"},
+        {"C-j": "end the search on the current entry"},
+        {"C-g": "escape from search"},
+        {"C-p": "previous command in history"},
+        {"C-n": "next command in history"}
+    ],
+    "variables": [
+        {"y=1; x=\"y\"; a=${!x}": "dereference variable by its name in string x; a=1"},
+        {"eval a=\\$$x": "more canonical variant of dereference; a=1"}
+    ],
+    "redirections": [
+        {"<, >, |": "redirections of stdin and stdout"},
+        {"2>": "redirects stderr"},
+        {"2>&1": "redirects stderr to stdout"},
+        {"ls > f 2>&1": "both stdout and stderr are in file"},
+        {"ls 2>&1 > f": "only stdout is in file"}
+    ]
+}

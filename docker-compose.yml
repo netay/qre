@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  compiler:
+    image: build
+    user: "${USERID}"
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./cache:/.cache
+      - ./go:/go
+      - ./src:/var/qre
+    working_dir: /var/qre

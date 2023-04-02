@@ -1,0 +1,18 @@
+{
+    "examples": [
+        {"grep [-e](fg:cyan) 'pat' string": "search for pattern in string"},
+        {"grep [-v](fg:cyan) ...": "invert result (non-mathing)"},
+        {"grep [-m](fg:cyan) 4 ...": "stop after 4 matches"},
+        {"grep [-rnw](fg:cyan) 'path' [-e](fg:cyan) 'pattern'": "find pattern in all files"},
+        {"grep [--include](fg:cyan)=\\*.{py,pyx} [-rnw](fg:cyan) 'path' [-e](fg:cyan) 'pattern'": "find pattern in files *.py, *.pyx"},
+        {"grep [--exclude](fg:cyan)=\\*.{o} [-rnw](fg:cyan) 'path' [-e](fg:cyan) 'pattern'": "find pattern in all files except *.o"},
+        {"grep [-e](fg:cyan) 'exact\\(_\\|(|)|\\.\\)' string": "find exact_, exact(, exact), exact."}
+    ],
+    "keys": [
+        {"[-n](fg:cyan)": "line numbers"},
+        {"[-w](fg:cyan)": "only whole the word"},
+        {"[-e](fg:cyan)": "pattern"},
+        {"[-v](fg:cyan)": "invert"},
+        {"[-i](fg:cyan)": "ignorecase"}
+    ]
+}

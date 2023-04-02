@@ -1,0 +1,11 @@
+{
+    "descr": [
+        {"ldd": "prints shared libraries required by program"}
+    ],
+    "keys": [
+        {"[-v](fg:cyan) | [--verbose](fg:cyan)": "all including symbol versioning"},
+        {"[-u](fg:cyan) | [--unused](fg:cyan) ": "print unused direct deps"},
+        {"[-d](fg:cyan) | [--data-relocs](fg:cyan)": "perform relocations and report missing objects (ELF only)"},
+        {"[-r](fg:cyan) | [--functions-relocs](fg:cyan)": "perform relocations for both data and functions (ELF only)"}
+    ]
+}

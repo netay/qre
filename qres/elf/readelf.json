@@ -1,0 +1,15 @@
+{
+    "keys": [
+        {"[-h](fg:cyan) | [--file-header](fg:cyan)": "info in headers in the start"},
+        {"[-I](fg:cyan) | [--segments](fg:cyan) | [--program-headers](fg:cyan)": "info in segment headers if any"},
+        {"[-S](fg:cyan) | [--sections](fg:cyan) | [--section-headers](fg:cyan)": "info in files section headers if any"},
+        {"[-g](fg:cyan) | [--section-groups](fg:cyan)": "info in section groups if any"},
+        {"[-s](fg:cyan) | [--syms](fg:cyan) | [--symbols](fg:cyan)": "display symbols if present"},
+        {"[-r](fg:cyan) | [--relocs](fg:cyan)": "contents in relocation section"},
+        {"[-d](fg:cyan) | [--dynamic](fg:cyan)": "contents of dynamic section"},
+        {"[-n](fg:cyan) | [--notes](fg:cyan)": "note segment and/or section"},
+        {"[-V](fg:cyan) | [--version-info](fg:cyan)": "contents of version section"},
+        {"[-a](fg:cyan) | [--all](fg:cyan)": "all privous"},
+        {"[-u](fg:cyan) | [--unwind](fg:cyan)": "unwind section"}
+    ]
+}

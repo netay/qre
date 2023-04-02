@@ -1,0 +1,28 @@
+{
+    "shortcuts": [
+        {"C Sh T": "New tab"},
+        {"C PgUp": "next tab"},
+        {"C PgDn": "prev tab"},
+        {"C Sh PgUp": "swap with next tab"},
+        {"C Sh PgDn": "swap with prev tab"},
+        {"C Alt A": "edit tab title"},
+        {"C Alt X": "edit terminal title"},
+        {"C Alt W": "edit window title"},
+        {"C +": "increase font size"},
+        {"C -": "decrease font size"},
+        {"C 0": "default font size"},
+        {"F11": "toggle fullscreen"},
+        {"C Sh X": "toggle between showing one terminal (maximize) and all terminals"},
+        {"C Sh Z": "toggle between showing one terminal (zoom) and all terminals"},
+        {"C Sh O": "split horizontally"},
+        {"C Sh E": "split vertically"},
+        {"C Sh <arrows>": "Move parent dragbar"},
+        {"Alt <arrows>": "Move to other terminal"},
+        {"C Sh <arrows>": "resize the terminal"},
+        {"C Sh W": "close terminal"},
+        {"C Sh Q": "close terminator"},
+        {"Sh C R": "reset terminal"},
+        {"Sh C R": "reset terminal and clear"},
+        {"C Sh S": "hide or reveal scrollbar"}
+    ]
+}

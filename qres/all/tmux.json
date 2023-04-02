@@ -1,0 +1,25 @@
+{
+    "tmux": [
+        {"sessions": [
+            {"C-b d": "detach"},
+            {"C-b $": "rename session"}
+        ]},
+        {"windows": [
+            {"C-b w": "open windows list"},
+            {"C-b c": "create window"},
+            {"C-b ,": "rename window"},
+            {"C-b &": "close window"}
+        ]},
+        {"panes": [
+            {"C-b %": "split with HORIZONTAL layout"},
+            {"C-b \"": "split with VERTICAL layout"},
+            {"C-b <arrows>": "move"},
+            {"C-b-<arrow> | C-b C-<arrow>": "resize current pane"},
+            {"C-b x": "close pane"}
+        ]},
+        {"attach": [
+            {"tmux a -t sess": "attach to session"},
+            {"tmux a -dt sess": "attach to session and detach others"}
+        ]}
+    ]
+}

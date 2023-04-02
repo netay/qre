@@ -1,0 +1,4 @@
+commands:
+    - s: save to file (only for pipe)
+    - /: search forward for regex
+    - ?: search backward for regex

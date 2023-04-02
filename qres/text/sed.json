@@ -1,0 +1,5 @@
+{
+    "examples": [
+        {"sed [-i](fg:cyan) '5d' file": "delete 5th line in file"}
+    ]
+}

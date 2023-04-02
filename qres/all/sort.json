@@ -1,0 +1,7 @@
+{
+    "keys": [
+        {"[-r](fg:cyan)": "reverse"},
+        {"[-n](fg:cyan)": "numeric values"},
+        {"[-k2](fg:cyan)": "by second column"}
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "navigation with keyboard": [
+        {"<Down>       ": "move down in current list"},
+        {"<up>         ": "move up   in current list"},
+        {"<right>      ": "move inside current element"},
+        {"<left>       ": "go up in search tree"},
+        {"gg | Home    ": "move to top of current list"},
+        {"G  | End     ": "Move to bottom of current list"},
+        {"q | C-c | Esc": "quit"}
+    ],
+    "navigation with [mouse](fg:red)": [
+        {"wheel": "up-down"},
+        {"left ": "move up in tree"},
+        {"right": "move inside"}
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "examples": {
+        "ls -1 . | xargs": "convert multiline input to single-line",
+        "... | xargs -0 rm \"{}\"": "remove files",
+        "... | xargs -0 -I {} rm -v {}": "remove files",
+        "xargs -a input.txt": "read inputs from file instead of stdin"
+    }
+}

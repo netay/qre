@@ -1,0 +1,6 @@
+"  ": "word count :: ."
+"[-c](fg:cyan)": --bytes
+"[-m](fg:cyan)": --chars
+"[-l](fg:cyan)": --lines
+"[-w](fg:cyan)": --words
+"[-L](fg:cyan)": --max-line-length

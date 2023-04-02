@@ -1,0 +1,6 @@
+{
+    "examples": [
+        {"find . [-name](fg:cyan) '*.py' [-type](fg:cyan) f": "find all path to python files in current directory tree"},
+        {"find . [-type](fg:cyan) f [-not -path](fg:cyan) './cache/*'": "exclude dir"}
+    ]
+}

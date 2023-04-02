@@ -1,0 +1,6 @@
+"[-u](fg:cyan)": effective user ID
+"[-g](fg:cyan)": effective group ID
+"[-G](fg:cyan)": all group IDs
+"[-nu](fg:cyan)": username
+-n(u|g|G): name[s] of <...>
+-r(u|u|G): real <...>

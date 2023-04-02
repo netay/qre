@@ -1,0 +1,11 @@
+keys:
+    - "[-a](fg:cyan)": archive
+    - "[-v](fg:cyan)": increase verbosity
+    - "[-h](fg:cyan)": human-readable numbers
+    - "[-r](fg:cyan)": recursive
+    - "[-n](fg:cyan)": dry run
+    - "[--delete](fg:cyan)": remove deleted from source
+    - "[-E](fg:cyan)": extended info
+typical use:
+    - "rsync [-arh --delete](fg:cyan) src dst": Make folders contents equal
+    - "rsync [-arv](fg:cyan) src dst": Put missing to dst and show all

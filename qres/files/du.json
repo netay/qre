@@ -1,0 +1,6 @@
+{
+    "examples": [
+        {"du [-sh](fg:cyan) file": "human-readable size of file/folder"},
+        {"du [-sk --inodes](fg:cyan) file": "number of inodes in file/folder"}
+    ]
+}

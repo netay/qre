@@ -1,0 +1,21 @@
+{
+    "hotkeys": [
+        {"C PgDn": "next tab"},
+        {"C PgUp": "prev tab"},
+        {"C Sh PgUp": "move tab right"},
+        {"C Sh PgDn": "move tab left"},
+        {"Sh+C+T": "new tab"},
+        {"Sh+C+H": "new tab in ~"},
+        {"Sh+C+W": "close tab"},
+        {"Sh+C+R": "rename tab"},
+        {"Sh Super ,": "split tab vertical"},
+        {"Super -": "split tab horizontal"},
+        {"Super X": "close terminal"},
+        {"Alt <arrows>": "move focus"},
+        {"C Alt Sh <arrows>": "move split handle"},
+        {"C +": "zoom in"},
+        {"C -": "zoom out"},
+        {"C Sh Up": "+ transparency"},
+        {"C Sh Dn": "- transparency"}
+    ]
+}

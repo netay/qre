@@ -1,0 +1,9 @@
+{
+    "examples": [
+        {"diff file1 file2": "show diff of two files"}
+    ],
+    "keys": [
+        {"[-q](fg:cyan)": "report only if files differ"},
+        {"[-r](fg:cyan)": "recursive (for directories)"}
+    ]
+}

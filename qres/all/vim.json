@@ -1,0 +1,118 @@
+{
+    "search": [
+        {"/": "search for the next occurrence"},
+        {"?": "search for the prev occurrence"},
+        {"*": "go to the next"},
+        {"#": "go to the prev"}
+    ],
+    "navigation": [
+        {"words": [
+            {"b": "go to begin of the previous word"},
+            {"B": "go to begin of the previous WORD"},
+            {"e": "go to the end of current word"},
+            {"E": "go to the end of current WORD"},
+            {"w": "go to the next word"},
+            {"W": "go to the next WORD"}
+        ]},
+        {"inside line": [
+            {"0": "go to start of the line"},
+            {"^": "go to the first non-blank symbol in the line"},
+            {"$": "go to the end of line"},
+            {"g_": "go to the last non-blank symbol in the line"},
+            {"5G | 5gg": "move to line 5"},
+            {"gd": "move to  local declaration (n|N to move in occurrences)"},
+            {"gD": "move to global declaration (n|N to move in occurrences)"},
+            {"|": "go to first column"},
+            {"5|": "go to 5th column"},
+            {"C-u": "half-page up"},
+            {"C-d": "half-page down"},
+            {"C-b": "page up"},
+            {"C-f": "page down"}
+        ]}
+    ],
+    "edit": [
+        {"undo": [
+            {"u": "undo"},
+            {"C-r": "redo"},
+            {"U": "undo on line"},
+            {"R": "enter replace mode"}
+        ]},
+        {"replace": [
+            {"c w": "replace word"},
+            {"c $": "replace to the end of line"},
+            {"c t": "replace to the next symbol occurrence"}
+        ]},
+        {".": "apply the command again"},
+        {"switch case": [
+            {"~": "change case of current character"},
+            {"guu": "change current line to lower"},
+            {"gUU": "change current line to lower"},
+            {"guw": "change to end of WORD to lower"},
+            {"gUw": "change to end of WORD to upper"},
+            {"guaw": "change all current WORD to lower"},
+            {"gUaw": "change all current WORD to upper"},
+            {"g~~": "invert case of line"},
+            {"g~w": "invert case of WORD"},
+            {"guG": "cnahge to the end to lower"},
+            {"gu3k": "change three lines above to lower"}
+        ]}
+    ],
+    "indetation": [
+        {">> | :>": "more indent"},
+        {"<< | :<": "less indent"},
+        {"X>> | :X>": "X times more indent"},
+        {"C-t": "mode indent in insert mode"},
+        {"C-d": "less indent in insert mode"},
+        {">4k": "indent 4 lines upwards"}
+    ],
+    "folding": [
+        {"za": "toggle a fold at the cursor"},
+        {"zo": "open a fold at the cursor"},
+        {"zO": "open all folds at the cursor"},
+        {"zc": "closes fold"},
+        {"zM": "closes all open folds"},
+        {"zm": "increase fold level by 1"},
+        {"zr": "decrease fold level by 1"},
+        {"zR": "decrease fold level to 0"},
+        {"zd": "delete the fold at the cursor"},
+        {"[z": "move to start of open fold"},
+        {"]z": "move to end of open fold"}
+    ],
+    "insert mode": [
+        {"i": "insert before cursor"},
+        {"a": "insert after cursor"},
+        {"I": "insert at the begin of line"},
+        {"A": "insert at the end of line"},
+        {"o": "open new line after current"},
+        {"O": "open new line before current"}
+    ],
+    "registers": [
+        {"\"+y": "copy  to   system register"},
+        {"\"+p": "paste from system register"},
+        {"\"xy": "copy  to   x      register"},
+        {"\"xp": "paste from x      register"},
+        {":reg": "show registers"}
+    ],
+    "commands": [
+        {":filetype plugin on": "enable plugin"},
+        {":setfiletype make": "work with file as makefile"}
+    ],
+    "~/.vimrc": [
+        {"[colorscheme](fg:red) molokai": "colormap"},
+        {"[nnoremap](fg:red) <[C-n](fg:cyan)> :NERDTree<CR>      ": "Tree"},
+        {"[nnoremap](fg:red) <[C-f](fg:cyan)> :NERDTreeFind<CR>  ": "Find"},
+        {"[nnoremap](fg:red) <[C-l](fg:cyan)> :NERDTreeFocus<CR> ": "Focus"},
+        {"[nnoremap](fg:red) <[C-t](fg:cyan)> :NERDTreeToggle<CR>": "Toggle tree"}
+    ],
+    "plugins": [
+        {"ALE": [
+            {"git clone https://github.com/dense-analysis/ale ~/.vim/bundle/ale": "install"},
+            {"let g:ale_completion_enabled = 1": "before plugin load!"},
+            {"set omnifunc=ale#completion#OmniFunc": "enable omnifunc for popup menu"},
+            {"C-X C-O": "list completions"},
+            {"C-P and C-N": "navigate completions"},
+            {"C-p": "autocomplete"},
+            {":ALEFix": "fix something"}
+        ]}
+    ]
+}

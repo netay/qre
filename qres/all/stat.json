@@ -1,0 +1,5 @@
+{
+    "examples": [
+        {"stat [-c](fg:cyan) '%y %n'": "print date of modification and name of file"}
+    ]
+}

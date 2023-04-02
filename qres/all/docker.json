@@ -1,0 +1,52 @@
+{
+    "docker-compose.yml": [
+        {"version": "3.7"},
+        {"services": {
+            "some_service": [
+                {"image:.../build:.../": "docker image url or path to dockerfile"},
+                {"tty": "true"},
+                {"stdin_open": "true"},
+                {"volumes": "list of volumes"},
+                {"working_dir": "/some/path"}
+            ]
+        }}
+    ],
+    "docker compose": [
+        {"rm srv": [
+            {"  ": "remove containers for service srv "},
+            {"[-s](fg:cyan)": "stop if needed"},
+            {"[-f](fg:cyan)": "do not ask [y/n]"}
+        ]},
+        {"ps": [
+            {"          ": "list active containers"},
+            {"[--services](fg:cyan)": "list active services"}
+        ]},
+        {"exec <srv> <cmd>": [
+            {"              ": "execute command <cmd> in container for service <srv>"},
+            {"[--index](fg:cyan)       ": "add index for multiple containers"},
+            {"[-u](fg:cyan) | [--user](fg:cyan)   ": "exec as user ..."},
+            {"[--privileged](fg:cyan)  ": "sudo"},
+            {"[-w](fg:cyan) | [--workdir](fg:cyan)": "exec in some dir"},
+            {"[-e](fg:cyan) | [--env](fg:cyan)    ": "set env variables"},
+            {"[-d](fg:cyan) | [--detach](fg:cyan) ": "run in background"}
+        ]},
+        {"up": [
+            {"                ": "create and start"},
+            {"[-d](fg:cyan) | [--detach](fg:cyan)   ": "start in background"},
+            {"[--attach](fg:cyan)        ": "attach to output"},
+            {"[--no-attach](fg:cyan)     ": "not [prev]"},
+            {"[--build](fg:cyan)         ": "build before create"},
+            {"[--no-build](fg:cyan)      ": "not [prev]"},
+            {"[--force-recreate](fg:cyan)": "not only if configuration changed"},
+            {"[--no-recreate](fg:cyan)   ": "do not recreate if exist"},
+            {"[--pull](fg:cyan)          ": "(always|missing|never)"},
+            {"[--quiet-pull](fg:cyan)    ": "do not print pull information"},
+            {"[--no-start](fg:cyan)      ": "do not start after creation"},
+            {"[--scale](fg:cyan)         ": "scale services to NUM instances"}
+        ]}
+    ],
+    "useful commands": [
+        {"docker history": "layers, commands, sizes"},
+        {"docker rmi [-f](fg:cyan) `docker images -q`": "kill all images"}
+    ]
+}

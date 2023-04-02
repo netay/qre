@@ -1,0 +1,9 @@
+{
+    "keys": [
+        {"[-C](fg:cyan) | [--demangle](fg:cyan)      ": "demangle"},
+        {"[-D](fg:cyan) | [--dynamic](fg:cyan)       ": "dynamic"},
+        {"[-g](fg:cyan) | [--extern-only](fg:cyan)   ": "external only"},
+        {"[-f](fg:cyan) | [--fomat](fg:cyan)=(b|s|p) ": "format (bsd|sysv|posix), only the 1st letters matters"},
+        {"[-u](fg:cyan) | [--undefined-only](fg:cyan)": "only undefined in object files"}
+    ]
+}

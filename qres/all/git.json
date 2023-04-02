@@ -1,0 +1,49 @@
+{
+    "merge": [
+        {"git merge dev": "merge dev branch to master (call from master); after push without commit"},
+        {"git submodule add https://github.com/netay/xnumpy-NN.git src/xnumpy-NN": "add submodule to projetc"},
+        {"git status [-s](fg:cyan)": "UU shows conflict files"},
+        {"git diff": "shows conflicts"},
+        {"git merge [--abort](fg:cyan)": "abort merge process"},
+        {"git reset": "reset conflict files to known good state"}
+    ],
+    "tags": [
+        {"git tag [-a](fg:cyan) v1 [-m](fg:cyan) 'msg'": "create tag <v1> with message <msg> (optional)"},
+        {"git tag [-d](fg:cyan) v0.1": "remove tag"},
+        {"git tag": "show tags"},
+        {"git show <tag>": "shows..."},
+        {"git push origin TAG": "pushes to origin with TAG"}
+    ],
+    "stash": [
+        {"list": "list stash records"},
+        {"pop {n}": "return to the last record"},
+        {"apply {n}": "apply record"},
+        {"drop": "remove record"},
+        {"clear": "remove all"},
+        {"branch name stash@{n}": "create branch from stash"},
+        {"git stash drop stash@{0}": "use case"}
+    ],
+    "~/.gitconfig": [
+        {"[user] ": [
+            {"name = Igor": "username in git"},
+            {"email = n.e@t.ai": "email in git"}
+        ]},
+        {"[core] ": [
+            {"command = ssh [-p](fg:cyan) 4422": "non-standard port"},
+            {"editor = vim": "or you prefer emacs? :)"}
+        ]},
+        {"[diff] ": {"tool = vimdiff": "vimdiff!"}},
+        {"[merge] ": [
+            {"tool = vimdiff": "vimdiff!"},
+            {"conflictstyle = diff3": "display style for conflicts"}
+        ]},
+        {"[difftool] ": {"prompt = 0": "?"}},
+        {"[mergetool] ": {"prompt = false": "?"}},
+        {"[alias] ": [
+            "s = status [-s](fg:cyan)",
+            "d = difftool",
+            "m = mergetool",
+            {"l = log [--graph --pretty](fg:cyan)=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' [--abbrev-commit --date](fg:cyan)=relative": "set pretty print of logs"}
+        ]}
+    ]
+}

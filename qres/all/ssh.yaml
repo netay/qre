@@ -1,0 +1,6 @@
+keys:
+    - "[-p](fg:cyan)": port
+    - "[-l](fg:cyan)": login
+    - "[-F](fg:cyan)": config file (default ~/.ssh/config)
+    - "[-i](fg:cyan)": identity file (~/.ssh/id_rsa)
+    - "[-X](fg:cyan)": enables X11-forwarding

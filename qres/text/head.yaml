@@ -1,0 +1,2 @@
+"[-n](fg:cyan),[--lines](fg:cyan)": number of first lines
+"[-c](fg:cyan),[--bytes](fg:cyan)": number of first bytes

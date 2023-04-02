@@ -1,0 +1,5 @@
+{
+    "examples": [
+        {"ar [-t](fg:cyan)": "list objects inside object file"}
+    ]
+}

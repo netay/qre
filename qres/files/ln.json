@@ -1,0 +1,5 @@
+{
+    "[-s](fg:cyan) ": "make symlink",
+    "[-sn](fg:cyan)": "make symlink to directory",
+    "[-sf](fg:cyan)": "update existing symlink to file"
+}

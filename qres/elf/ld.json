@@ -1,0 +1,10 @@
+{
+    "keys": [
+        {"[-o](fg:cyan)* | [--output](fg:cyan)=*": "output to *"},
+        {"[--force-dynamic](fg:cyan)": "force output to have dynamic sections"},
+        {"[-r](fg:cyan) | [--relocatable](fg:cyan)": "make relocatable output"},
+        {"[-s](fg:cyan) | [--strip-all](fg:cyan)": "omit all symbol info"},
+        {"[-S](fg:cyan) | [--strip-debug](fg:cyan)": "omit debug info"},
+        {"[-x](fg:cyan) | [--discard-all](fg:cyan)": "delete all symbols"}
+    ]
+}
