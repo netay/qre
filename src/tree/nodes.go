@@ -9,8 +9,15 @@ import (
 type Node interface {
     app(
         io.StringWriter, // where to write
+        io.StringWriter, // where to write
         int,              // margin, depth of the node
-        func(io.StringWriter, int, ...interface{})error,
+        func(
+            io.StringWriter,
+            io.StringWriter,
+            int,
+            interface{},
+            interface{},
+        ) error,
     )
 }
 type Leaf struct {
@@ -28,48 +35,78 @@ type MNode struct { // map-node
 }
 
 func NewMNode(ch map[string]Node) MNode {
-    var node = MNode {ch: ch}
-    return node
+    return MNode {ch: ch}
+}
+func NewLNode(ch []Node) LNode {
+    return LNode {ch: ch}
 }
 
 func (l Leaf) app(
-    w io.StringWriter,
+    w1 io.StringWriter,
+    w2 io.StringWriter,
     m int,
-    f func(io.StringWriter, int, ...interface{})error,
+    f func(
+        io.StringWriter,
+        io.StringWriter,
+        int,
+        interface{},
+        interface{},
+    ) error,
 ) {
-    f(w, m, l.value + "\n")
+    f(w1, w2, m, l.value + "\n", "\n")
 }
 func (n MNode) app(
-    w io.StringWriter,
+    w1 io.StringWriter,
+    w2 io.StringWriter,
     m int,
-    f func(io.StringWriter, int, ...interface{})error,
+    f func(
+        io.StringWriter,
+        io.StringWriter,
+        int,
+        interface{},
+        interface{},
+    ) error,
 ) {
     for key, value := range n.ch {
         switch v := value.(type) {
         case Leaf:
-            f(w, m, key + "[ // ", v.value + "](fg:yellow,mod:bold)\n")
+            f(w1, w2, m, key + "\n", (v.value + "\n"))
         default:
-            f(w, m, key + ":\n")
-            value.app(w, m + 1, f)
+            f(w1, w2, m, key + ":\n", "\n")
+            value.app(w1, w2, m + 1, f)
         }
     }
 }
 func (l LNode) app(
-    w io.StringWriter,
+    w1 io.StringWriter,
+    w2 io.StringWriter,
     m int,
-    f func(io.StringWriter, int, ...interface{})error,
+    f func(
+        io.StringWriter,
+        io.StringWriter,
+        int,
+        interface{},
+        interface{},
+    )error,
 ) {
     for _, n := range l.ch {
-        n.app(w, m + 1, f)
+        n.app(w1, w2, m + 1, f)
     }
 }
 func (s SNode) app(
-    w io.StringWriter,
+    w1 io.StringWriter,
+    w2 io.StringWriter,
     m int,
-    f func(io.StringWriter, int, ...interface{})error,
+    f func(
+        io.StringWriter,
+        io.StringWriter,
+        int,
+        interface{},
+        interface{},
+    ) error,
 ) {
-    f(w, m, s.name)
-    s.ch.app(w, m, f)
+    f(w1, w2, m, s.name + "\n", "\n")
+    s.ch.app(w1, w2, m, f)
 }
 
 func CanMoveRight(n Node) bool {
@@ -148,24 +185,30 @@ func FindChild(n Node, names []string, nodeIndex int) Node {
     return child
 }
 
-func PrintNode(n Node) string {
-    var b strings.Builder
+func PrintNode(n Node) (string, string) {
+    var bleft strings.Builder
+    var bright strings.Builder
     var fu =
     func(
-        w    io.StringWriter,
+        w1   io.StringWriter,
+        w2   io.StringWriter,
         m    int,
-        args ...interface{},
+        lline interface{},
+        rline interface{},
     ) error {
-        for i :=0 ; i != m ; i++ {
-            w.WriteString(" ")
+        for i := 0 ; i != m ; i++ {
+            w1.WriteString(" ")
         }
-        for _, a := range args {
-            w.WriteString(a.(string))
+        if w1 != nil {
+            w1.WriteString(lline.(string))
+        }
+        if w2 != nil {
+            w2.WriteString(rline.(string))
         }
         return nil
     }
-    n.app(&b, 0, fu)
-    return b.String()
+    n.app(&bleft, &bright, 0, fu)
+    return bleft.String(), bright.String()
 }
 
 

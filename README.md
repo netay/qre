@@ -2,6 +2,11 @@
 
 Quick REference in terminal
 
+Usage:
+```bash
+qre
+```
+
 ## Installation from deb
 
 Install with root:
@@ -11,7 +16,7 @@ export PATH="$PATH:$HOME/.local/bin"
 ```
 
 Rootless:
-```
+```bash
 dpkg -x qre.deb .
 mkdir -p ~/.local/bin
 mv ./tmp/qre/qres ~/.qre
@@ -20,14 +25,10 @@ export PATH="$PATH:$HOME/.local/bin"
 rmdir tmp
 ```
 
-References will be available by
-```bash
-qre
-```
-
 ## Building from source
 
-```
+```bash
 make
 make install
 ```
+

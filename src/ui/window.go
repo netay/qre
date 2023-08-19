@@ -23,7 +23,7 @@ func (mw MainWindow) Run() {
     menu := tree.LsNode(mw.root)
 
     if err := tui.Init(); err != nil {
-        log.Fatalf("Failde to initialize termui: %v", err)
+        log.Fatalf("Failed to initialize termui: %v", err)
     }
     defer tui.Close()
 
@@ -44,13 +44,20 @@ func (mw MainWindow) Run() {
     view.Text = "Move by arrows (left, right)\nExit by q"
     view.Title = "References"
 
+    view_val := widgets.NewParagraph()
+    view_val.Text = "Comments will be here"
+    view_val.Title = "Comments"
+
     termWidth, termHeight := tui.TerminalDimensions()
     grid := tui.NewGrid()
     grid.SetRect(0, 0, termWidth, termHeight)
 
     grid.Set(
         tui.NewRow(0.5, ss.navRow()...),
-        tui.NewRow(0.5, view),
+        tui.NewRow(0.5, 
+            tui.NewCol(0.5, view),
+            tui.NewCol(0.5, view_val),
+        ),
     )
 
     tui.Render(grid)
@@ -104,11 +111,14 @@ func (mw MainWindow) Run() {
         grid.SetRect(0, 0, termWidth, termHeight)
         grid.Set(
             tui.NewRow(0.5, ss.navRow()...),
-            tui.NewRow(0.5, view),
+            tui.NewRow(0.5,
+                tui.NewCol(0.5, view),
+                tui.NewCol(0.5, view_val),
+            ),
         )
         pt := ss.posttop()
         if pt != nil {
-            view.Text = tree.PrintNode(pt)
+            view.Text, view_val.Text = tree.PrintNode(pt)
         }
 
         if previousKey == "g" {
